@@ -62,6 +62,12 @@ const Header = () => {
                   >
                     Employee Data
                   </button>
+                  <button
+                    className="font-lexend font-light hover:text-blue-500"
+                    onClick={() => handleNavigation("/employee-crud")}
+                  >
+                    Employee CRUD
+                  </button>
                 </div>
               </div>
             )}
@@ -98,6 +104,13 @@ const Header = () => {
                 onClick={() => handleNavigation("/employee-data")}
               >
                 Employee Data
+              </button>
+              <p className="font-lexend font-thin text-3xl">|</p>
+              <button
+                className="font-lexend font-light hover:text-blue-500"
+                onClick={() => handleNavigation("/employee-crud")}
+              >
+                Employee CRUD
               </button>
             </div>
           </>

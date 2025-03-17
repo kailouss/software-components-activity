@@ -5,7 +5,8 @@ import Header from "./components/header/Header";
 import AboutPage from "./pages/AboutPage";
 import ContentsPage from "./pages/ContentsPage";
 import LandingPage from "./pages/LandingPage";
-import EmployeePage from "./pages/EmployeePage";
+import EmployeeDataPage from "./pages/EmployeeDataPage";
+import { EmployeePage } from "./pages/EmployeePage";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -16,7 +17,8 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/contents" element={<ContentsPage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/employee-data" element={<EmployeePage />} />
+        <Route path="/employee-data" element={<EmployeeDataPage />} />
+        <Route path="/employee-crud" element={<EmployeePage />} />
       </Routes>
     </AnimatePresence>
   );

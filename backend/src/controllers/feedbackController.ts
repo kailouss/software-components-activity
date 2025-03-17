@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
-import { db } from "../firebase";
+import { db } from "../firebase.js";
+import { DocumentData } from "firebase-admin/firestore";
 
 export const getFeedback = async (_req: Request, res: Response) => {
   try {
     const snapshot = await db.collection("feedback").get();
-    const feedbackList = snapshot.docs.map((doc) => ({
+    const feedbackList = snapshot.docs.map((doc: DocumentData) => ({
       id: doc.id,
       ...doc.data(),
     }));

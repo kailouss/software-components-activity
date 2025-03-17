@@ -6,10 +6,10 @@ const serviceAccount = JSON.parse(
   fs.readFileSync("src/serviceAccountKey.json", "utf8")
 ) as ServiceAccount;
 
-const firebaseApp = initializeApp({
-  credential: cert(serviceAccount),
+const app = initializeApp({
+  credential: cert(serviceAccount as ServiceAccount),
 });
 
-const db = getFirestore(firebaseApp);
+const db = getFirestore(app);
 
 export { db };
