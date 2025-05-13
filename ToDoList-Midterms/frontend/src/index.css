@@ -1,0 +1,12 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+@import "tailwindcss";
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+#root {
+  width: 100%;
+}
